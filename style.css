@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body {
+    font-family: 'Alata', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.bank-area {
+    padding-top: 100px;
+}
+.bank-area h1 {
+    margin-bottom: 40px;
+}
+.submit-area {
+    padding: 50px 35px;
+    box-shadow: 0px 5px 23px #9c92f178;
+    border-radius: 10px;
+    text-align: center;
+}
+.submit-area h4 {
+    margin-bottom: 20px;
+}
+.form-control {
+    height: 50px;
+    border: 1px solid #b4a4e4a1;
+}
+.btn {
+    padding: 8px 35px;
+    font-size: 18px;
+}
