@@ -13,7 +13,7 @@
     depositBtn.addEventListener('click', function(){
         const depositNumber = getInputNumber("depositAmount");
 
-        updateText("currentDepo",depositNumber)
+        updateText("currentDepo",depositNumber);
         updateText("balance",depositNumber);
 
         document.getElementById("depositAmount").value = "";
@@ -23,14 +23,22 @@
     const withdrawBtn = document.getElementById('withdraw');
     withdrawBtn.addEventListener('click',function(){
         const withdrawAmountNumber = getInputNumber("withdrawAmount");
+        
+        updateText("currentWithdraw",withdrawAmountNumber);
+        updateText("balance", -1 * withdrawAmountNumber);
+
+        document.getElementById("withdrawAmount").value = "";
+
     });
 
+    //Get Input
     function getInputNumber(id){
         const amount = document.getElementById(id).value;
         const amountNumber = parseFloat(amount);
         return amountNumber;
     }
 
+    // Result Balance Amount
     function updateText(id,depositNumber){
         const currentBalance = document.getElementById(id).innerText;
         const balanceNumber = parseFloat(currentBalance);
@@ -38,11 +46,5 @@
         document.getElementById(id).innerText = totalBalance;
     };
   
-        
-    //     const currentWithdraw = document.getElementById("currentWithdraw").innerText;
-    //     const currentWithdrawNumber = parseFloat(currentWithdraw);
-    //     const totalWithdraw = withdrawAmountNumber + currentWithdrawNumber;
-    //     document.getElementById("currentWithdraw").innerText = totalWithdraw;
 
-    //     document.getElementById("withdrawAmount").value = "";
 
