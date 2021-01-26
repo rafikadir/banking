@@ -13,27 +13,67 @@
     <body>
         <section class="bank-area container">
             <h1 class="bank-head text-center">Welcome to Javascript Bank</h1>
-            <div class="row">
+            <div id="login-area" class="row">
                 <div class="col-lg-3"></div>
                 <div class="col-lg-6">
                     <div class="submit-area">
                         <h4>Log In</h4>
-                        <form>
+                        <div>
                             <div class="form-group pb-3">
                                 <input type="email" class="form-control" placeholder="Enter email">
                             </div>
                             <div class="form-group pb-3">
                                 <input type="password" class="form-control" placeholder="Password">
                             </div>
-                            <button id="login" type="submit" class="btn btn-primary">Submit</button>
-                          </form>
+                            <button id="login" class="btn btn-primary">Submit</button>
+                          </div>
                           <small class="mt-5 text-danger d-block text-center">This is a simple <b>Dynamic</b> Banking Project</small>
                     </div>
                 </div>
                 <div class="col-lg-3"></div>
             </div>
         </section> 
-        
+        <section id="trasaction-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="deposit status">
+                            <h5>Deposit</h5>
+                            <h1>$ <span id="currentDepo">00</span></h1>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="withdraw status">
+                            <h5>Withdraw</h5>
+                            <h1>$ <span id="currentWithdraw">00</span></h1>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="balance status">
+                            <h5>Balance</h5>
+                            <h1>$ <span id="balance">00</span></h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="deposit-area">
+                            <h5>Deposit:</h5>
+                            <input id="depositAmount" class="form-control" type="number" placeholder="$ amount you want to deposit"><br>
+                            <button id="deposit" class="btn btn-success">Deposit</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="withdraw-area">
+                            <h5>Withdraw:</h5>
+                            <input id="withdrawAmount" class="form-control" type="number" placeholder="$ amount you want to withdraw"><br>
+                            <button id="withdraw" class="btn btn-success">Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Js -->
         <script src="script.js"></script>
     </body>
